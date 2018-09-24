@@ -14,7 +14,6 @@ public class Professor {
                 switch (var) {
                     case 1:
                         Group.getInstance().call();
-                        System.out.println("All students are present: \n");
                         break;
                     case 2:
                         System.out.println("Let's go on without rollcall! \n");

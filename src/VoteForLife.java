@@ -27,9 +27,9 @@ public class VoteForLife {
             try {
                 BufferedReader vote = new BufferedReader(new InputStreamReader(System.in));
                 values = Integer.parseInt(vote.readLine());
-                VoteForLife voteCap = new VoteForLife();
-                int a = voteCap.values;
-                switch (a) {
+//                VoteForLife voteCap = new VoteForLife();
+//                int a = voteCap.values;
+                switch (values) {
                     case 1:
                         skills.add(INTELLIGENCE);
                         break;

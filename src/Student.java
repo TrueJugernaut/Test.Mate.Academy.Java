@@ -9,6 +9,8 @@ public class Student {
     int leader;
     int prSolv;
     int timeM;
+    boolean present;
+
 
     public Student(String name, int intell, int social, int communic, int leader, int prSolv, int timeM){
 
@@ -19,12 +21,14 @@ public class Student {
         this.leader = leader;
         this.prSolv = prSolv;
         this.timeM = timeM;
+        this.setPresent(this.generatePresent());
 
     }
     public void list() {
-        System.out.println("name: " + name + "\nIntelligens: " + intell + "\nsocial: " + social + "\ncommunacation: " + communic +
-                "\nleadership: " +leader + "\nproblem solving skills: " + prSolv + "\ntime managment: " + timeM + "\n \n");
-    }
+            System.out.println("name: " + name + "\nIntelligens: " + intell + "\nsocial: " + social + "\ncommunacation: " + communic +
+                    "\nleadership: " +leader + "\nproblem solving skills: " + prSolv + "\ntime managment: " + timeM + "\npresent:" + isPresent() + "\n \n");
+        }
+
     public int calculateSkills(ArrayList<Integer> skills){
 
         int currentSkill = 0;
@@ -55,6 +59,16 @@ public class Student {
         }
         return currentSkill;
 
+    }
+    public boolean isPresent() {
+        return present;
+    }
+
+    public void setPresent(boolean present) {
+        this.present = present;
+    }
+    protected boolean generatePresent(){
+        return Math.random() < 0.5;
     }
 
 }

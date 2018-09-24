@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Group {
 
-    private ArrayList<Student> studentList = new ArrayList<>();
-    private static Group sGroup;
+    public ArrayList<Student> studentList = new ArrayList<>();
+    public static Group sGroup;
 
     public static Group getInstance() {
 
@@ -14,7 +14,7 @@ public class Group {
         return sGroup;
 
     }
-    private Group() {
+    public Group() {
         initGroup();
     }
 
@@ -39,7 +39,6 @@ public class Group {
     }
 
     public void call() {
-
         for (Student aStudentList : studentList) {
             aStudentList.list();
         }
